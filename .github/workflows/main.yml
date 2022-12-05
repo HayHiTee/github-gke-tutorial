@@ -47,11 +47,11 @@ jobs:
         workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
         service_account: 'temmy-github@github-gke-tutorial.iam.gserviceaccount.com'
 
-    # Alternative option - authentication via credentials json
-    # - id: 'auth'
-    #   uses: 'google-github-actions/auth@v1'
-    #   with:
-    #     credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+     Alternative option - authentication via credentials json
+     - id: 'auth'
+       uses: 'google-github-actions/auth@v1'
+       with:
+         credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
     # Setup gcloud CLI
     - name: Set up Cloud SDK
